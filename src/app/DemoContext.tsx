@@ -1,0 +1,4 @@
+import {createContext,useContext,useEffect,useReducer,ReactNode} from 'react';import {DemoCase,initialCase} from '../data/case2019';import {Action,reducer} from './demoReducer';
+type Ctx={state:DemoCase;dispatch:(a:Action)=>void};const DemoContext=createContext<Ctx|null>(null);const key='gyzht-demo-case-2019';
+export function DemoProvider({children}:{children:ReactNode}){const [state,dispatch]=useReducer(reducer,initialCase,()=>{try{return JSON.parse(localStorage.getItem(key)||'null')||initialCase}catch{return initialCase}});useEffect(()=>localStorage.setItem(key,JSON.stringify(state)),[state]);return <DemoContext.Provider value={{state,dispatch}}>{children}</DemoContext.Provider>}
+export const useDemo=()=>{const v=useContext(DemoContext);if(!v)throw new Error('useDemo must be inside DemoProvider');return v};

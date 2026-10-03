@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08"><FIToFICstmrCdtTrf><GrpHdr><MsgId>GYZHT-2019-001</MsgId><UETR>2f3bb6f8-0e0f-4f2d-9ac0-2019demo001</UETR></GrpHdr><CdtTrfTxInf><IntrBkSttlmAmt Ccy="USD">180000.00</IntrBkSttlmAmt><Dbtr><Nm>MARCO FOERSTER GMBH</Nm></Dbtr><Cdtr><Nm>TIANJIN ESHOW CO., LTD.</Nm></Cdtr><RmtInf><Ustrd>PAYMENT FOR INV EXP2019033 / GOODS TRADE</Ustrd></RmtInf></CdtTrfTxInf></FIToFICstmrCdtTrf></Document>
