@@ -11,7 +11,7 @@ const checks=[
   ['workflow includes applicability running',caseCode.includes("'APPLICABILITY_RUNNING'" )],
   ['workflow includes waiting supplement',caseCode.includes("'WAITING_SUPPLEMENT'" )],
   ['precheck stage model exists',caseCode.includes('PrecheckStage')],
-  ['precheck completion is reducer-driven',reducer.includes("case'RUN_PRECHECK'" )],
+  ['precheck completion is reducer-driven',reducer.includes('case "RUN_PRECHECK"')],
   ['operator guard exists',guards.includes('canSubmitOperator')],
   ['reviewer guard exists',guards.includes('canCompleteReviewer')],
   ['evidence map covers payment',evidence.includes("paymentAmount")],
