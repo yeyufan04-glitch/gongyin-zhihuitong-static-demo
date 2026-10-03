@@ -5,9 +5,9 @@ import { CaseStatusBar } from "../components/CaseStatusBar";
 import { assetUrl } from "../utils/asset";
 import { getEvidence, Evidence } from "../data/evidenceMap";
 import { canSubmitOperator } from "../domain/guards";
-export function BankPage() {
+export function BankPage({initialMode='list'}:{initialMode?:'list'|'operator'|'reviewer'}) {
   const { state, dispatch } = useDemo();
-  const [mode, setMode] = useState<"list" | "operator" | "reviewer">("list");
+  const [mode, setMode] = useState<"list" | "operator" | "reviewer">(initialMode);
   const [drawer, setDrawer] = useState(false);
   const [notice, setNotice] = useState("");
   if (mode === "list")

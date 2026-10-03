@@ -127,7 +127,7 @@ export function App() {
         </div>
       </header>
       {role === "enterprise" && <EnterprisePage />}
-      {role === "bank" && <BankPage />}
+      {role === "bank" && <BankPage initialMode={capture && window.location.hash.includes("fig6-11") ? "reviewer" : capture && /fig6-(8|9|10)/.test(window.location.hash) ? "operator" : "list"} />}
       {role === "runtime" && (
         <RuntimePage onGoEnterprise={() => setRole("enterprise")} />
       )}
